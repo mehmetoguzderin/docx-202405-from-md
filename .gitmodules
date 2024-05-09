@@ -1,0 +1,4 @@
+[submodule "docx-202404-from-md"]
+  path = docx-202404-from-md
+  url = https://github.com/mehmetoguzderin/docx-202404-from-md
+  shallow = true
