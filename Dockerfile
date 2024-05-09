@@ -6,6 +6,7 @@ RUN \
     DEBIAN_FRONTEND=noninteractive \
     apt install -y \
     build-essential \
+    chromium-browser \
     git \
     inkscape \
     libcairo2-dev \
@@ -21,6 +22,9 @@ RUN \
     wget && \
     DEBIAN_FRONTEND=noninteractive \
     rm -rf /var/lib/apt/lists/*
+
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 
 RUN \
     python3 -m pip install --no-cache-dir --break-system-packages \
