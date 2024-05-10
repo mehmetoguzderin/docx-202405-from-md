@@ -30,7 +30,7 @@ def convert_mermaid_to_png(mermaid_file):
 
     png_file = os.path.join(img_directory, f"{base_filename}.mermaid.png")
 
-    command = f"mmdc -i {mermaid_file} -o {png_file} -s 16 -b white"
+    command = f"mmdc --puppeteerConfigFile /docx-202405-from-md/puppeteer.json -i {mermaid_file} -o {png_file} -s 16 -b white"
     try:
         subprocess.run(command, shell=True, check=True)
     except subprocess.CalledProcessError as e:
@@ -57,7 +57,7 @@ def convert_trio_to_png(trio_file):
         print(f"Error converting {trio_file} to SVG: {e}")
         return
 
-    command = f"inkscape {temp_svg_path} --export-png={png_file} --export-background=white --export-background-opacity=1.0 --export-dpi=600"
+    command = f"inkscape {temp_svg_path} --export-filename={png_file} --export-background=white --export-background-opacity=1.0 --export-dpi=600"
     try:
         subprocess.run(command, shell=True, check=True)
     except subprocess.CalledProcessError as e:

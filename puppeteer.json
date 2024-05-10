@@ -1,0 +1,7 @@
+{
+    "args": [
+        "--disable-setuid-sandbox",
+        "--no-sandbox"
+    ],
+    "timeout": 0
+}

@@ -6,4 +6,4 @@ fi
 
 $PYTHON_BIN /docx-202405-from-md/src-to-img.py /data
 
-$PYTHON_BIN /docx-202404-from-md/docx-202404-from-md.py /data
+$PYTHON_BIN /docx-202405-from-md/docx-202404-from-md/docx-202404-from-md.py /data
